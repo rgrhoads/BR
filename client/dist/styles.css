@@ -1,0 +1,35 @@
+/*
+////////// BODY ////////////
+*/
+body {
+  background-color: lightsteelblue;
+}
+
+h1 {
+  text-align: center;
+  color: darkslategrey;
+}
+
+/*
+////////// FLEXBOX ////////////
+*/
+
+.flex-container {
+  display: flex;
+}
+
+/*
+////////// NAVIGATION BAR ////////////
+*/
+
+.nav-bar {
+  width: 90%;
+  margin: auto;
+  border: 2px solid darkorange;
+  color: dodgerblue;
+  justify-content: space-between;
+}
+
+.nav-bar-widget {
+  margin: 5px;
+}
