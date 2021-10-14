@@ -108,9 +108,10 @@ h1 {
 
 .add-player-button {
   margin: 5px;
+  font-size: 20px;
   border-radius: 10px;
-  height: 75px;
-  width: 100px;
+  height: 50px;
+  width: 120px;
 }
 
 .player-list {
@@ -141,6 +142,43 @@ h1 {
   color:rgb(220, 20, 40);
   display: flex;
   justify-content: space-evenly;
+}
+
+.player-form {
+  display: flex;
+}
+
+.username-input {
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 45px;
+  width: 250px;
+}
+
+.platform-input {
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 45px;
+  width: 150px;
+}
+
+#platform {
+  margin: 0 5px;
+  padding-left: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user {
+  margin: 0 5px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*

@@ -17,21 +17,25 @@ const AddPlayer = (props) => {
 
   return(
     <div className="add-player">
-      <div>
-        <label>
+      <div className="player-form">
+        <label id="platform">
           Platform:
-          <select onChange={ (e) => setPlatform(e.target.value) }>
-            <option className="option-pc" value={'origin'}>PC</option>
+          <select
+            className="platform-input"
+            onChange={ (e) => setPlatform(e.target.value) }
+          >
+            <option className="option-pc" value={'origin'}>Origin</option>
             <option className="option-xbl" value={'xbl'}>XBL</option>
             <option className="option-psn" value={'psn'}>PSN</option>
           </select>
         </label>
-        <label>
+        <label id="user">
           Username:
           <input
+            className="username-input"
             type="text"
             name="firstname"
-            placeholder="Enter username here..."
+            placeholder="Enter username here... "
             onChange={(e) => { setUser(e.target.value); } }
           />
         </label>
