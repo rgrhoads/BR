@@ -5,7 +5,7 @@ CREATE DATABASE br;
 
 CREATE TABLE users (
   id SERIAL,
-  username varchar(25),
+  username varchar(40) UNIQUE,
   platform varchar(10),
   player_rank varchar(15),
   player_level integer,

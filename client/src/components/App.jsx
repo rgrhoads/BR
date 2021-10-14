@@ -16,6 +16,7 @@ class App extends React.Component {
       curr_game: 'Apex Legends',
       playerlist: [],
     }
+    this.getUsers = this.getUsers.bind(this);
   }
 
   componentDidMount() {
@@ -38,7 +39,8 @@ class App extends React.Component {
       <Context.Provider value={{
         game: this.state.curr_game,
         user: this.state.curr_user,
-        playerlist: this.state.playerlist
+        playerlist: this.state.playerlist,
+        getUsers: this.getUsers,
       }}>
         <div className="main">
           <Nav />

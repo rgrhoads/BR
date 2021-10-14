@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import axios from 'axios';
+import Context from './Context.jsx'
 
 const AddPlayer = (props) => {
+  const context = useContext(Context);
+  const [user, setUser] = useState('');
+  const [platform, setPlatform] = useState('origin');
+
+  const submitUser = () => {
+    console.log('submitting user and platform: ', user)
+    console.log('submitting platform: ', platform)
+    axios.get(`/apex/${platform}/${user}`)
+      .then( context.getUsers() )
+      .catch((err) => console.log('ERROR: ', err));
+  }
 
   return(
     <div className="add-player">
       <div>
-        <select>
-          <option className="option-pc" value={'PC'}>PC</option>
-          <option className="option-xbl" value={'XBL'}>XBL</option>
-          <option className="option-psn" value={'PSN'}>PSN</option>
-        </select>
         <label>
-          SteamID:
+          Platform:
+          <select onChange={ (e) => setPlatform(e.target.value) }>
+            <option className="option-pc" value={'origin'}>PC</option>
+            <option className="option-xbl" value={'xbl'}>XBL</option>
+            <option className="option-psn" value={'psn'}>PSN</option>
+          </select>
+        </label>
+        <label>
+          Username:
           <input
             type="text"
             name="firstname"
-            onChange={(e) => { this.updateFirstName(e.target.value); } }
+            placeholder="Enter username here..."
+            onChange={(e) => { setUser(e.target.value); } }
           />
         </label>
       </div>
-      <input className="add-player-button" type="button" value="Add Player" />
+      <input
+        className="add-player-button"
+        type="button"
+        value="Add Player"
+        onClick={() => submitUser()}
+      />
     </div>
   );
 }
