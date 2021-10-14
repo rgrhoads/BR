@@ -13,30 +13,23 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      test: "TEST!!!",
-      curr_game: 'Apex Legends',
-      curr_user: 'Chowhawk',
-      playerlist: [
-        {
-          platform: 'origin',
-          username: 'ryan',
-          level: 100,
-          kills: 9001,
-          rank: 'Platinum 1'
-        },
-        {
-          platform: 'origin',
-          username: 'caleb',
-          level: 999,
-          kills: 9999,
-          rank: 'God Mode'
-        }
-      ],
+      playerlist: [],
     }
   }
 
   componentDidMount() {
-    console.log('Retrieving Leaderboard...')
+    this.getUsers();
+  }
+
+  getUsers() {
+    axios.get('/apex/users')
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          playerlist: response.data
+        })
+      })
+      .catch()
   }
 
   render() {

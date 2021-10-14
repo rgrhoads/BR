@@ -5,7 +5,7 @@ const credentials = {
   port: 5432,
   user: 'Rhoads',
   password: null,
-  database: 'products_database',
+  database: 'br',
   max: 20,
 };
 
