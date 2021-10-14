@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const axios = require('axios');
+const router = require('./router.js');
 
 let app = express();
 
@@ -9,10 +11,7 @@ app.use(express.static(path.join(__dirname, '..', '/client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.get('/test', (req, res) => {
-  console.log('Endpoint Test Success!');
-  res.sendStatus(200);
-})
+app.use('/', router);
 
 app.listen(port, function() {
   console.log(`Listening on Port: ${port}`);

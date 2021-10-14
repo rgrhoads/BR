@@ -1,8 +1,14 @@
 /*
 ////////// BODY ////////////
 */
+
 body {
-  background-color: lightsteelblue;
+  /* background: linear-gradient(90deg, silver 20.5%, lightsteelblue 0); */
+  background: rgb(200, 210, 220);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -11,11 +17,18 @@ h1 {
 }
 
 /*
-////////// FLEXBOX ////////////
+////////// MAIN ////////////
 */
 
-.flex-container {
-  display: flex;
+.main {
+  padding-left: 250px;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 2600px;
+  box-sizing: border-box;
 }
 
 /*
@@ -23,13 +36,115 @@ h1 {
 */
 
 .nav-bar {
-  width: 90%;
-  margin: auto;
-  border: 2px solid darkorange;
-  color: dodgerblue;
-  justify-content: space-between;
+  background: rgb(27, 34, 34);
+  color: rgb(187, 190, 200);
+  position: fixed;
+  width: 250px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-bar-logo {
+  border: 3px solid rgb(250, 90, 40);
+  color: rgb(250, 90, 40);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-bar-widget {
+  height: 10%;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+////////// GAME TITLE ////////////
+*/
+
+.game-title {
+  background: rgb(210, 215, 220);
+  border: 3px solid rgb(210, 215, 220);
+  height: 200px;
+  text-align: center;
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+////////// SEARCH BAR ////////////
+*/
+
+.search {
+  justify-content: unset;
+}
+
+/*
+////////// PLAYER LIST ////////////
+*/
+
+.add-player {
+  background-color: rgb(225, 230, 235);
+  display: flex;
+  justify-content: right;
+  color: black;
+}
+
+.add-player-button {
   margin: 5px;
+  border-radius: 10px;
+  height: 75px;
+  width: 100px;
+}
+
+.player-list {
+  background-color: darkgrey;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+}
+
+.leader-board {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+}
+
+.player-field {
+  font-size: 20px;
+  margin: auto;
+  border: 2px solid rgb(90 90 90);
+  border-radius: 10px;
+  width: 90%;
+  height: 100vh;
+  background-color: rgb(67, 74, 74);
+}
+
+.column-titles {
+  margin: 5px auto;
+  color:rgb(250, 90, 40);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*
+////////// PLAYER ////////////
+*/
+
+.user-block {
+  color: rgb(187, 190, 200);
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.columns {
+  width: 150px;
 }

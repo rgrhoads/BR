@@ -1,14 +1,14 @@
 import React from 'react';
+import Search from './Search.jsx';
 
 const Nav = (props) => {
 
   return(
-    <div className="nav-bar flex-container">
-      <div className="nav-bar-widget">HOME</div>
-      <div className="nav-bar-widget">LEADERBOARDS</div>
-      <div className="nav-bar-widget">COMMUNITY</div>
-      <div className="nav-bar-widget">FORUMS</div>
-      <div className="nav-bar-widget">PROFILE</div>
+    <div className="nav-bar">
+      <div className="nav-bar-logo">BRAGGING <br/> RIGHTS ™</div>
+      <div id="lol" className="nav-bar-widget">League of Legends</div>
+      <div id="sg" className="nav-bar-widget">Splitgate</div>
+      <div id="cod" className="nav-bar-widget">Call of Duty: WZ</div>
     </div>
   );
 }
