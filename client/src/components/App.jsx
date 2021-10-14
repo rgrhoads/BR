@@ -13,6 +13,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      curr_game: 'Apex Legends',
       playerlist: [],
     }
   }
